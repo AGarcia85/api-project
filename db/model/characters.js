@@ -14,4 +14,4 @@ const Character = new Schema({
     portrayed: String
 })
 
-module.exports = mongoose.model('Character', Country)
+module.exports = mongoose.model('Character', Character)
