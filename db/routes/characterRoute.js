@@ -1,9 +1,7 @@
-// import express
-const express = require("express")
-// import character controller
-const charController = require("../controller/controller")
+const express = require("express");
 
-// create character route varible
+const charController = require("../controller/controller");
+
 const charRouter = express.Router()
 
 charRouter.get("/", charController.index)
@@ -14,7 +12,6 @@ charRouter.get("/characters/:charId", charController.showCharId)
 
 charRouter.get("/characters/:name", charController.showName)
 
-charRouter.get("/characters/:status", charController.showStatus)
+charRouter.get("/status/:status", charController.showStatus)
 
-// export router
 module.exports = charRouter

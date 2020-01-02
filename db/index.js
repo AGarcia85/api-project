@@ -1,15 +1,19 @@
-// import express
 const express = require("express")
-// create varible to define express method
+const cors = require("cors")
 const app = express()
-// import charcater router
-const charRoutes = require("./routes/characterRoute")
 
-// create listen method to launch webiste
-app.listen(4010, () => console.log("port works!"))
+app.use(cors());
+
+const charRoutes = require("./routes/characterRoute")
 
 app.use("/", charRoutes)
 
 app.get("/", (req, res) => {
     res.send("/characters")
 })
+
+app.set("port", process.env.PORT || 4010);
+
+app.listen(app.get("port"), () => {
+    console.log(`✅ PORT: ${app.get("port")} 🌟`);
+  });

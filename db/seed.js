@@ -1,6 +1,5 @@
-// import json data
 const data = require('./data.json')
-// import character model file
+
 const Character = require('./model/Characters')
 
 Character.remove({})

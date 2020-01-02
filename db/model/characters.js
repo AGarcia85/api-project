@@ -1,8 +1,7 @@
-// import connection file
 const mongoose = require('../connection');
-// now create schema varible for mongoose
+
 const Schema = mongoose.Schema
-// create model for character data 
+ 
 const Character = new Schema({
     char_id: Number,
     name: String,

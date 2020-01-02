@@ -1,4 +1,4 @@
-const Character = require('../model/Characters')
+const Character = require('../model/Characters');
 
 module.exports = {
     index: (req, res) => {
