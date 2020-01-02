@@ -8,11 +8,9 @@ if (process.env.NODE_ENV === "production") {
     mongoURI = "mongodb://localhost/breakingBad_db"
 }
 
-mongoose
-  .connect(mongoURI, { useNewUrlParser: true, useUnifiedTopology: true })
-  .then(instance =>
-    console.log(`Connected to db: ${instance.connections[0].name}`)
-  )
-  .catch(error => console.log("Connection failed!", error));
+mongoose.connect("mongodb://localhost/breakingBad_db",{
+    useNewUrlParser: true,
+    useUnifiedTopology: true
+})
 
 module.exports = mongoose;
