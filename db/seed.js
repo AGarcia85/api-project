@@ -1,6 +1,6 @@
 const data = require('./data.json');
 
-const Character = require('./model/Characters');
+const Character = require('./Characters');
 // const Character = require("./model/Characters")
 
 Character.remove({})
