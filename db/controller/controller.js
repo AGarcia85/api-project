@@ -6,6 +6,12 @@ module.exports = {
             res.json(character)
         })
     },
+    create: (req, res) => {
+        Character.create(req.body).then(list => {
+            res.json(list)
+          })
+    },
+      
     findById: (req, res) => {
         Character.findById({ _id: req.params._id})
             .then(character => {
