@@ -6,7 +6,7 @@ const charRouter = express.Router()
 
 charRouter.get("/", charController.index)
 
-charRouter.get("/", charController.create)
+charRouter.post("/", charController.create)
 
 charRouter.get("/:_id", charController.findById)
 

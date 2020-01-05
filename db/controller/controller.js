@@ -7,8 +7,8 @@ module.exports = {
         })
     },
     create: (req, res) => {
-        Character.create(req.body).then(list => {
-            res.json(list)
+        Character.create(req.body).then(character => {
+            res.json(character)
           })
     },
       
