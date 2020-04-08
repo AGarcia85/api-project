@@ -6,11 +6,11 @@ const charRouter = express.Router()
 
 charRouter.get("/", charController.index)
 
-charRouter.post("/create", charController.create)
+charRouter.post("/", charController.create)
 
-charRouter.delete("/delete:_id", charController.delete)
+charRouter.delete("/delete:id", charController.delete)
 
-charRouter.post("/update:_id", charController.update)
+charRouter.post("/update:id", charController.update)
 
 charRouter.get("/:_id", charController.findById)
 
