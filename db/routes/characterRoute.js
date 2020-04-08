@@ -8,7 +8,7 @@ charRouter.get("/", charController.index)
 
 charRouter.post("/", charController.create)
 
-charRouter.delete("/delete:id", charController.delete)
+charRouter.delete("/", charController.delete)
 
 charRouter.post("/update:id", charController.update)
 
