@@ -18,7 +18,19 @@ charRoutes.post('/create', (req, res) => {
     Character.create(req.body).then(character => {
       res.json(character)
     })
-  }) 
+  })
+  
+charRoutes.delete('/delete', (req, res) => {
+  Character.delete(req.body).then(character => {
+    res.json(character)
+  })
+}) 
+
+charRoutes.post('/update', (req, res) => {
+  Character.update(req.body).then(character => {
+    res.json(character)
+  })
+}) 
 
 app.set("port", process.env.PORT || 5050);
 
