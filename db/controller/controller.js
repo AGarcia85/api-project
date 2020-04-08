@@ -11,7 +11,16 @@ module.exports = {
             res.json(character)
           })
     },
-      
+    delete: (req, res) => {
+        Character.findOneAndDelete(req.body).then(character => {
+            res.json(character)
+          })
+    },
+    update: (req, res) => {
+        Character.findOneAndUpdate(req.body).then(character => {
+            res.json(character)
+          })
+    },  
     findById: (req, res) => {
         Character.findById({ _id: req.params._id})
             .then(character => {

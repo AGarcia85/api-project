@@ -3,9 +3,8 @@ const cors = require("cors")
 const bodyParser = require("body-parser")
 const app = express()
 
-app.use(cors());
-
 app.use(bodyParser.json())
+app.use(cors());
 
 const charRoutes = require("./db/routes/characterRoute")
 
@@ -14,6 +13,12 @@ app.use("/", charRoutes)
 app.get("/", (req, res) => {
     res.send("/characters")
 })
+
+charRoutes.post('/create', (req, res) => {
+    Character.create(req.body).then(character => {
+      res.json(character)
+    })
+  }) 
 
 app.set("port", process.env.PORT || 5050);
 
